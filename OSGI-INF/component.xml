@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" activate="activate" deactivate="deactivate" name="it.polito.elite.dog.communication.websocket.environment.api">
+   <implementation class="it.polito.elite.dog.communication.websocket.environment.api.EnvironmentWebSocketEndpoint"/>
+   <reference bind="addedWebSocketConnector" cardinality="1..1" interface="it.polito.elite.dog.communication.websocket.api.WebSocketConnector" name="WebSocketConnector" policy="static" unbind="removedWebSocketConnector"/>
+   <reference bind="addedRESTApi" cardinality="1..1" interface="it.polito.elite.dog.communication.rest.environment.api.EnvironmentRESTApi" name="EnvironmentRESTApi" policy="static" unbind="removedRESTApi"/>
+</scr:component>
